@@ -1,13 +1,15 @@
-#ifdef CLIB_IOPRINT_H_
+#ifndef CLIB_IOPRINT_H_
 #define CLIB_IOPRINT_H_
 
 #include <stdio.h>
 #include <limits.h>
 
 #define PRINT_METADATA
-#define PRINTLNF(format, ...) printf("("__FILE__": %d) %s: "format"\n", __LINE__, __FUNCTION__, ##_VA_ARGS__)
+#ifdef PRINT_METADATA	
+#define PRINTLNF(format, ...) printf("("__FILE__": %d) %s: "format"\n", __LINE__, __FUNCTION__, ##__VA_ARGS__)
 #else
 #define PRINTLNF(format, ...) printf(format"\n", ##__VA_ARGS__)
+#endif
 
 // printlnf char
 #define PRINT_CHAR(char_value) PRINTLNF(#char_value": %c", char_value)
