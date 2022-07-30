@@ -4,10 +4,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "list.h"
-#include "list.c"
-#include "dlist.h"
-#include "dlist.c"
+#include "../list.h"
+#include "../dlist.h"
 
 void test_list(); // 单链表
 void destroy1(void*);

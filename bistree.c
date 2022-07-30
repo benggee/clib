@@ -1,7 +1,3 @@
-//
-// Created by benggee on 2021/2/18.
-// Binary Search Tree
-//
 
 #include <stdlib.h>
 #include <string.h>
